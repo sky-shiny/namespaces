@@ -55,3 +55,10 @@ ns quantum-gateway-RegionOne1234
 #qrouter-a653047b-1963-44d6-9a52-ddad00e68101
 ```
 
+Once you have your list log onto the agent in question and check the list against the results of the following.
+
+```
+ssh quantum-gateway-RegionOne1234 "ip netns list" > /tmp/onhost
+ns quantum-gateway-RegionOne1234 > /tmp/required
+opendiff /tmp/onhost /tmp/required
+```
