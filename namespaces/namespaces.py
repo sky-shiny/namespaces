@@ -6,11 +6,12 @@ class RegionError(Exception):
     def __init__(self, message):
         Exception.__init__(self, message)
 
+
 def get_namespaces(quantum_gateway):
-    '''
+    """
     Get a list of namespaces for a given quantum gateway
     :return: list of namespaces
-    '''
+    """
     agents = NEUTRON.list_agents()
     try:
         qgateways_dhcp_agent = [agent['id'] for agent in agents['agents'] if
