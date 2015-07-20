@@ -58,7 +58,7 @@ ns quantum-gateway-RegionOne1234
 Once you have your list log onto the agent in question and check the list against the results of the following.
 
 ```
-ssh quantum-gateway-RegionOne1234 "ip netns list" > /tmp/onhost
-ns quantum-gateway-RegionOne1234 > /tmp/required
+ssh quantum-gateway-RegionOne1234 "ip netns list | sort" > /tmp/onhost
+ns quantum-gateway-RegionOne1234 | sort > /tmp/required
 opendiff /tmp/onhost /tmp/required
 ```
