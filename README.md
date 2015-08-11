@@ -10,7 +10,7 @@ Installation
 
 
 ```
-pip install git+git://github.com/sky-shiny/namespaces.git
+pip install git+https://github.com/sky-shiny/namespaces.git
 ```
 
 Usage
